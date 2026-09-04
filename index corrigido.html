@@ -1,0 +1,413 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="Currículo online de Vitor dos Santos — estudante de Análise e Desenvolvimento de Sistemas, com foco em desenvolvimento, automação, QA e suporte técnico." /><title>Vitor dos Santos | Currículo</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet"><style>
+    :root {
+      --bg: #f2efe9;
+      --surface: #fffdf9;
+      --surface-2: #f7f3ec;
+      --text: #18211e;
+      --muted: #69736f;
+      --accent: #285e50;
+      --accent-dark: #1f4a3f;
+      --accent-soft: #dce9e3;
+      --warm: #a86f4b;
+      --warm-soft: #f0e2d6;
+      --line: rgba(24,33,30,.10);
+      --shadow: 0 16px 40px rgba(34,44,40,.08);
+      --shadow-hover: 0 22px 48px rgba(34,44,40,.13);
+      --radius: 24px;
+      --max: 1160px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Manrope", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 7% 2%, rgba(168,111,75,.09), transparent 25%),
+        radial-gradient(circle at 92% 12%, rgba(40,94,80,.11), transparent 28%),
+        linear-gradient(180deg, #f7f3ed 0%, var(--bg) 42%, #eeece6 100%);
+      color: var(--text);
+      line-height: 1.68;
+      letter-spacing: -.01em;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(calc(100% - 36px), var(--max)); margin: 0 auto; }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(18px);
+      background: rgba(247,243,237,.82);
+      border-bottom: 1px solid rgba(24,33,30,.08);
+    }
+
+    nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+    }
+
+    .brand {
+      font-family: "Sora", sans-serif;
+      font-weight: 800;
+      letter-spacing: -.05em;
+      font-size: 1.22rem;
+      background: var(--text);
+      color: #fff;
+      padding: 9px 14px;
+      border-radius: 13px;
+      box-shadow: 0 8px 24px rgba(24,33,30,.10);
+    }
+    .brand span { color: #9fd7c7; }
+    .nav-links { display: flex; gap: 7px; flex-wrap: wrap; }
+    .nav-links a {
+      color: #58635f;
+      font-size: .88rem;
+      font-weight: 700;
+      padding: 8px 10px;
+      border-radius: 10px;
+      transition: .2s ease;
+    }
+    .nav-links a:hover { color: var(--accent-dark); background: rgba(40,94,80,.08); }
+
+    .hero {
+      padding: 72px 0 46px;
+      display: grid;
+      grid-template-columns: 1.38fr .62fr;
+      gap: 26px;
+      align-items: stretch;
+    }
+
+    .hero-main, .hero-side, .card {
+      background: rgba(255,253,249,.92);
+      border: 1px solid rgba(24,33,30,.08);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-main {
+      padding: 48px;
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(135deg, rgba(255,253,249,.98), rgba(247,243,236,.96));
+    }
+    .hero-main::before {
+      content: "";
+      position: absolute;
+      width: 9px;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      background: linear-gradient(180deg, var(--accent), var(--warm));
+    }
+    .hero-main::after {
+      content: "";
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      right: -120px;
+      bottom: -130px;
+      background: radial-gradient(circle, rgba(40,94,80,.12), transparent 67%);
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--accent-dark);
+      text-transform: uppercase;
+      letter-spacing: .16em;
+      font-size: .72rem;
+      font-weight: 800;
+      background: var(--accent-soft);
+      padding: 7px 11px;
+      border-radius: 999px;
+    }
+    .eyebrow::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
+
+    h1, h2, h3, .headline, .brand { font-family: "Sora", sans-serif; }
+    h1 {
+      margin: 18px 0 10px;
+      font-size: clamp(2.75rem, 6.5vw, 5.15rem);
+      line-height: .98;
+      letter-spacing: -.065em;
+      max-width: 720px;
+    }
+    .headline {
+      margin: 0 0 22px;
+      color: #3e4b46;
+      font-size: clamp(1.02rem, 2vw, 1.28rem);
+      font-weight: 600;
+      letter-spacing: -.025em;
+    }
+    .lead { color: var(--muted); max-width: 780px; font-size: 1.04rem; }
+
+    .actions { display: flex; gap: 11px; flex-wrap: wrap; margin-top: 30px; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 18px;
+      border-radius: 13px;
+      font-weight: 800;
+      font-size: .92rem;
+      border: 1px solid var(--line);
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(24,33,30,.11); }
+    .btn.primary { background: var(--accent); color: #ffffff; border-color: var(--accent); }
+    .btn.primary:hover { background: var(--accent-dark); }
+    .btn.secondary { background: rgba(255,255,255,.72); color: var(--text); }
+    .btn.secondary:hover { background: #fff; border-color: rgba(40,94,80,.22); }
+
+    .hero-side {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: linear-gradient(180deg, #fffdf9, #f7f1e8);
+    }
+    .status {
+      padding: 12px 14px;
+      border-radius: 13px;
+      background: linear-gradient(135deg, #dfeee7, #edf5f1);
+      border: 1px solid #d1e4dc;
+      color: #2c5c4f;
+      font-weight: 800;
+      font-size: .9rem;
+    }
+    .quick-list { display: grid; gap: 11px; margin-top: 20px; }
+    .quick-item {
+      padding: 12px 13px;
+      background: rgba(255,255,255,.62);
+      border: 1px solid rgba(24,33,30,.07);
+      border-radius: 14px;
+    }
+    .quick-item small { display: block; color: var(--muted); font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; font-weight: 800; }
+    .quick-item strong { font-size: .96rem; }
+
+    section { padding: 28px 0; }
+    .section-title { margin-bottom: 20px; position: relative; padding-left: 17px; }
+    .section-title::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 5px;
+      width: 5px;
+      height: 42px;
+      border-radius: 4px;
+      background: linear-gradient(180deg, var(--accent), var(--warm));
+    }
+    .section-title h2 {
+      margin: 0 0 4px;
+      font-size: clamp(1.65rem, 3vw, 2.15rem);
+      letter-spacing: -.045em;
+      line-height: 1.15;
+    }
+    .section-title p { margin: 0; color: var(--muted); font-size: .96rem; }
+
+    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .card {
+      padding: 27px;
+      transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+    }
+    .card:hover { transform: translateY(-3px); box-shadow: var(--shadow-hover); border-color: rgba(40,94,80,.18); }
+    .card h3 { margin-top: 0; letter-spacing: -.03em; }
+    .card p { color: var(--muted); }
+
+    .tags { display: flex; gap: 10px; flex-wrap: wrap; }
+    .tag {
+      padding: 8px 12px;
+      border-radius: 12px;
+      color: #30443d;
+      background: linear-gradient(180deg, #f9fcfa, #edf4f0);
+      border: 1px solid #d9e6e0;
+      font-size: .88rem;
+      font-weight: 700;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.8);
+    }
+
+    .timeline { display: grid; gap: 3px; padding: 14px 25px; }
+    .job {
+      padding: 17px 16px 17px 22px;
+      border-left: 3px solid #bfd4cc;
+      position: relative;
+    }
+    .job::before {
+      content: "";
+      position: absolute;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      left: -6px;
+      top: 25px;
+      background: var(--accent);
+      box-shadow: 0 0 0 4px var(--accent-soft);
+    }
+    .job h3 { margin: 0; font-size: 1.04rem; }
+    .job p { margin: 4px 0 0; color: var(--muted); }
+
+    .project { position: relative; overflow: hidden; padding-top: 34px; }
+    .project::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      height: 7px;
+      background: linear-gradient(90deg, var(--accent), var(--warm));
+    }
+    .project::after {
+      content: "";
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      right: -85px;
+      bottom: -90px;
+      background: rgba(168,111,75,.08);
+    }
+    .project strong {
+      color: var(--accent-dark);
+      display: inline-block;
+      font-size: .77rem;
+      text-transform: uppercase;
+      letter-spacing: .09em;
+      background: var(--accent-soft);
+      padding: 6px 9px;
+      border-radius: 999px;
+    }
+
+    .profile-wrap { text-align: center; margin-bottom: 18px; }
+    .profile-photo {
+      width: 220px;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 28px;
+      border: 5px solid #fff;
+      outline: 1px solid rgba(24,33,30,.10);
+      box-shadow: 0 18px 36px rgba(24,33,30,.16);
+      display: block;
+      margin: 0 auto 14px;
+    }
+    .profile-caption {
+      color: var(--warm);
+      font-family: "Sora", sans-serif;
+      font-size: .82rem;
+      font-weight: 700;
+      margin: 0;
+      letter-spacing: .02em;
+    }
+
+    .cert-toolbar { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 18px; }
+    .cert-count {
+      color: var(--accent-dark);
+      font-weight: 800;
+      background: var(--accent-soft);
+      padding: 7px 11px;
+      border-radius: 999px;
+    }
+    .certificate-card { display: flex; flex-direction: column; min-height: 238px; border-top: 4px solid var(--accent-soft); }
+    .certificate-card .cert-meta { color: var(--muted); font-size: .9rem; margin: 2px 0 12px; }
+    .certificate-card .cert-provider { color: var(--warm); font-weight: 800; font-size: .78rem; text-transform: uppercase; letter-spacing: .09em; }
+    .certificate-card h3 { font-size: 1.03rem; line-height: 1.38; margin: 8px 0; }
+    .certificate-card .cert-link {
+      margin-top: auto;
+      color: var(--accent-dark);
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .certificate-card .cert-link::after { content: "↗"; }
+    .certificate-card .cert-link:hover { color: var(--warm); }
+    .certificate-group-title {
+      margin: 30px 0 15px;
+      font-size: 1.12rem;
+      color: #33433d;
+      letter-spacing: -.025em;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .certificate-group-title::after { content: ""; height: 1px; background: rgba(24,33,30,.10); flex: 1; }
+
+    .cert-featured { margin-bottom: 16px; }
+    .cert-more {
+      margin-top: 10px;
+      border: 1px solid rgba(24,33,30,.10);
+      border-radius: 22px;
+      background: rgba(255,253,249,.85);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .cert-more summary {
+      list-style: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 18px 22px;
+      font-family: "Sora", sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+      background: linear-gradient(180deg, rgba(240,226,214,.55), rgba(255,253,249,.8));
+    }
+    .cert-more summary::-webkit-details-marker { display: none; }
+    .cert-more summary::after {
+      content: "⌄";
+      font-size: 1.45rem;
+      line-height: 1;
+      color: var(--accent-dark);
+      transition: transform .22s ease;
+      flex-shrink: 0;
+    }
+    .cert-more[open] summary::after { transform: rotate(180deg); }
+    .cert-more summary:hover { background: linear-gradient(180deg, rgba(220,233,227,.68), rgba(255,253,249,.96)); }
+    .cert-more-content { padding: 8px 22px 22px; }
+    .cert-intro {
+      margin: 0 0 8px;
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+
+    footer {
+      padding: 52px 0 68px;
+      color: var(--muted);
+      text-align: center;
+      font-size: .9rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero, .grid-2, .grid-3 { grid-template-columns: 1fr; }
+      .hero { padding-top: 48px; }
+      .hero-main { padding: 34px; }
+      .hero-side { max-width: 540px; width: 100%; }
+      .nav-links { display: none; }
+    }
+
+    @media (max-width: 560px) {
+      .container { width: min(calc(100% - 22px), var(--max)); }
+      .hero-main { padding: 28px 24px 30px 30px; }
+      h1 { font-size: 2.65rem; }
+      .actions .btn { width: 100%; }
+      .profile-photo { width: 190px; }
+      .card { padding: 22px; }
+    }
+  </style></head><body><header><div class="container"><nav><a class="brand" href="#inicio">Vitor<span>.</span></a><div class="nav-links"><a href="#sobre">Sobre</a><a href="#competencias">Competências</a><a href="#projetos">Projetos</a><a href="#experiencia">Experiência</a><a href="#formacao">Formação</a><a href="#certificados">Certificados</a><a href="#contato">Contato</a></div></nav></div></header><main class="container" id="inicio"><div class="hero"><section class="hero-main"><div class="eyebrow">Currículo online</div><h1>Vitor dos Santos</h1><p class="headline">Desenvolvedor em formação | Python • Automação • IA • Suporte Técnico</p><p class="lead">
+          Profissional em transição de carreira para Tecnologia da Informação, cursando Análise e Desenvolvimento de Sistemas, com experiência em gestão, atendimento ao cliente, suporte técnico e manutenção de computadores e celulares. Busco oportunidade de estágio ou posição júnior em desenvolvimento, QA, automação ou suporte de TI.
+        </p><div class="actions"><a class="btn primary" href="mailto:contatovitorsantos@gmail.com">Entrar em contato</a><a class="btn secondary" href="https://www.linkedin.com/in/vitorsantos3101/" target="_blank" rel="noopener">LinkedIn</a><a class="btn secondary" href="https://github.com/vitorfloripa" target="_blank" rel="noopener">GitHub</a><a class="btn secondary" href="https://wa.me/qr/AJVXUCIN6IJWK1" target="_blank" rel="noopener">WhatsApp</a></div></section><aside class="hero-side"><div><div class="profile-wrap"><img class="profile-photo" src="foto-vitor.jpg" loading="eager" decoding="async" alt="Foto profissional de Vitor dos Santos"><p class="profile-caption">Perfil profissional para currículo online</p></div><div class="status">Disponível para oportunidades em TI</div><div class="quick-list"><div class="quick-item"><small>Localização</small><strong>Florianópolis, SC</strong></div><div class="quick-item"><small>Formação</small><strong>ADS — Faculdade Estácio</strong></div><div class="quick-item"><small>Objetivo</small><strong>Estágio / Desenvolvedor Júnior / QA / Suporte</strong></div></div></div></aside></div><section id="sobre"><div class="section-title"><h2>Sobre mim</h2><p>Experiência prática com pessoas, tecnologia e resolução de problemas.</p></div><div class="card"><p>
+          Minha trajetória reúne experiência comercial e técnica. Atuei com atendimento e gestão, além de suporte e manutenção de celulares e computadores. Hoje direciono essa experiência para o desenvolvimento de software e automação, construindo projetos próprios enquanto avanço na formação em tecnologia.
+        </p></div></section><section id="competencias"><div class="section-title"><h2>Competências</h2><p>Tecnologias e áreas com as quais venho estudando e desenvolvendo projetos.</p></div><div class="card"><div class="tags"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Java</span><span class="tag">Kotlin</span><span class="tag">Android Studio</span><span class="tag">HTML & CSS</span><span class="tag">Git & GitHub</span><span class="tag">Docker</span><span class="tag">APIs REST</span><span class="tag">n8n</span><span class="tag">Evolution API</span><span class="tag">Testes de Software / QA</span><span class="tag">Inteligência Artificial</span><span class="tag">Suporte Técnico</span></div></div></section><section id="projetos"><div class="section-title"><h2>Projetos</h2><p>Projetos práticos desenvolvidos durante minha formação.</p></div><div class="grid-3"><article class="card project"><strong>Android + IA</strong><h3>Jarvs</h3><p>Assistente virtual Android com reconhecimento de voz, Text-to-Speech e integração planejada com serviços e automações.</p></article><article class="card project"><strong>Automação</strong><h3>WhatsApp + n8n</h3><p>Ambiente com n8n, Evolution API, Docker, PostgreSQL e Redis para automação e integração de fluxos via WhatsApp.</p></article><article class="card project"><strong>Backend / Produto</strong><h3>My Book</h3><p>Conceito de plataforma privada de álbuns e fotos, com permissões, convites e controle de acesso.</p></article></div></section><section id="experiencia"><div class="section-title"><h2>Experiência profissional</h2><p>Experiência técnica, comercial e de atendimento.</p></div><div class="card timeline"><div class="job"><h3>Virtuacell</h3><p>Comércio e manutenção de celulares e computadores — atendimento, diagnóstico, manutenção e suporte técnico.</p></div><div class="job"><h3>Vento Tecnologia da Informação</h3><p>Atividades de suporte e atendimento em tecnologia.</p></div><div class="job"><h3>Khronos</h3><p>Atendimento, organização e trabalho em equipe.</p></div><div class="job"><h3>Supermercados Imperatriz</h3><p>Atendimento ao público, organização e foco em resultados.</p></div></div></section><section id="formacao"><div class="section-title"><h2>Formação e cursos</h2></div><div class="grid-2"><div class="card"><h3>Formação acadêmica</h3><p><strong>Análise e Desenvolvimento de Sistemas</strong><br>Faculdade Estácio — cursando.</p></div><div class="card"><h3>Cursos</h3><p>CPDI — Além de Jogar Eu Faço Jogos (2025)</p><p>DIO — Java, IA e Python (2024 — atual)</p><p>Ultima School — Python (2024 — atual)</p></div></div></section><section><div class="section-title"><h2>Idiomas</h2></div><div class="grid-3"><div class="card"><h3>Português</h3><p>Nativo</p></div><div class="card"><h3>Inglês</h3><p>Básico</p></div><div class="card"><h3>Espanhol</h3><p>Básico</p></div></div></section><section id="certificados"><div class="section-title"><h2>Certificados</h2><p>Formações, cursos e reconhecimentos que complementam minha trajetória em tecnologia.</p></div><div class="cert-toolbar"><span class="cert-count">20 certificados selecionados</span><span class="tag">Python</span><span class="tag">Git/GitHub</span><span class="tag">IA</span><span class="tag">Lógica</span><span class="tag">Empregabilidade</span></div><h3 class="certificate-group-title">Certificados em destaque</h3><div class="grid-3 cert-featured"><article class="card certificate-card"><div class="cert-provider">DIO</div><h3>Conhecendo a Linguagem de Programação Python</h3><div class="cert-meta">2h · 08/04/2024</div><a class="cert-link" href="conhecendo-a-linguagem-de-programacao-python.pdf" target="_blank" rel="noopener">Ver certificado ↗</a></article><article class="card certificate-card"><div class="cert-provider">DIO</div><h3>Ambiente de Desenvolvimento e Primeiros Passos com Python</h3><div class="cert-meta">1h · 04/01/2024</div><a class="cert-link" href="ambiente-de-desenvolvimento-e-primeiros-passos-com-python.pdf" target="_blank" rel="noopener">Ver certificado ↗</a></article><article class="card certificate-card"><div class="cert-provider">DIO</div><h3>Tipos de Operadores com Python</h3><div class="cert-meta">2h · 25/04/2024</div><a class="cert-link" href="tipos-de-operadores-com-python.pdf" target="_blank" rel="noopener">Ver certificado ↗</a></article><article class="card certificate-card"><div class="cert-provider">DIO</div><h3>Versionamento de Código com Git e GitHub</h3><div class="cert-meta">2h · 09/01/2024</div><a class="cert-link" href="versionamento-de-codigo-com-git-e-github.pdf" target="_blank" rel="noopener">Ver certificado ↗</a></article></div><details class="cert-more"><summary>Ver mais 16 certificados</summary><div class="cert-more-content"><p class="cert-intro">Toque ou clique para expandir e visualizar o restante dos certificados sem deixar a tela do celular carregada com muita informação.</p><h3 class="certificate-group-title">Tecnologia</h3><div class="grid-3"><article class="card certificate-card"><div class="cert-provider">DIO</div><h3>Contribuindo em um Projeto Open Source no GitHub</h3><div class="cert-meta">1h · 18/03/2024</div><a class="cert-link" href="contribuindo-em-um-projeto-open-source-no-github.pdf" target="_blank" rel="noopener">Ver certificado ↗</a></article><article class="card certificate-card"><div class="cert-provider">DIO</div><h3>Princípios de Desenvolvimento de Software Colaborativo</h3><div class="cert-meta">7h · 18/03/2024</div><a class="cert-link" href="principios-de-desenvolvimento-de-software-colaborativo.pdf" target="_blank" rel="noopener">Ver certificado ↗</a></article><article class="card certificate-card"><div class="cert-provider">DIO</div><h3>Estrutura de um Software e Seu Ambiente de Desenvolvimento</h3><div class="cert-meta">1h · 18/02/2024</div><a class="cert-link" href="estrutura-de-um-software-e-seu-ambiente-de-desenvolvimento.pdf" target="_blank" rel="noopener">Ver certificado ↗</a></article><article class="card certificate-card"><div class="cert-provider">DIO</div><h3>Entendendo Algoritmos e Fluxogramas</h3><div class="cert-meta">1h · 07/02/2024</div><a class="cert-link" href="entendendo-algoritmos-e-fluxogramas.pdf" target="_blank" rel="noopener">Ver certificado ↗</a></article><article class="card certificate-card"><div class="cert-provider">DIO</div><h3>Aperte Start com Lógica de Programação</h3><div class="cert-meta">1h · 09/01/2024</div><a class="cert-link" href="aperte-start-com-logica-de-programacao.pdf" target="_blank" rel="noopener">Ver certificado ↗</a></article><article class="card certificate-card"><div class="cert-provider">DIO</div><h3>Introdução à Inteligência Artificial</h3><div class="cert-meta">1h · 07/05/2024</div><a class="cert-link" href="introducao-a-inteligencia-artificial.pdf" target="_blank" rel="noopener">Ver certificado ↗</a></article><article class="card certificate-card"><div class="cert-provider">DIO</div><h3>Aplicações e Impacto da IA no Mundo Atual</h3><div class="cert-meta">1h · 07/05/2024</div><a class="cert-link" href="aplicacoes-e-impacto-da-ia-no-mundo-atual.pdf" target="_blank" rel="noopener">Ver certificado ↗</a></article><article class="card certificate-card"><div class="cert-provider">DIO</div><h3>Aula Inaugural: Coding The Future Squadio - Python Data Analytics</h3><div class="cert-meta">2h · 18/03/2024</div><a class="cert-link" href="aula-inaugural-coding-the-future-squadio-python-data-analytics.pdf" target="_blank" rel="noopener">Ver certificado ↗</a></article><article class="card certificate-card"><div class="cert-provider">DIO</div><h3>Introdução à Linguagem de Programação Lua</h3><div class="cert-meta">2h · 30/06/2024</div><a class="cert-link" href="introducao-a-linguagem-de-programacao-lua.pdf" target="_blank" rel="noopener">Ver certificado ↗</a></article><article class="card certificate-card"><div class="cert-provider">DIO</div><h3>Sintaxe e Estrutura da Linguagem Lua</h3><div class="cert-meta">2h · 30/06/2024</div><a class="cert-link" href="sintaxe-e-estrutura-da-linguagem-lua.pdf" target="_blank" rel="noopener">Ver certificado ↗</a></article><article class="card certificate-card"><div class="cert-provider">DIO</div><h3>Onboarding: Conhecendo a Formação Lua Developer</h3><div class="cert-meta">1h · 30/06/2024</div><a class="cert-link" href="onboarding-conhecendo-a-formacao-lua-developer.pdf" target="_blank" rel="noopener">Ver certificado ↗</a></article><article class="card certificate-card"><div class="cert-provider">DIO</div><h3>Materiais Complementares</h3><div class="cert-meta">1h · 09/01/2024</div><a class="cert-link" href="materiais-complementares.pdf" target="_blank" rel="noopener">Ver certificado ↗</a></article><article class="card certificate-card"><div class="cert-provider">DIO</div><h3>Bootcamps DIO: Educação Gratuita e Empregabilidade Juntas!</h3><div class="cert-meta">1h · 04/01/2024</div><a class="cert-link" href="bootcamps-dio-educacao-gratuita-e-empregabilidade-juntas.pdf" target="_blank" rel="noopener">Ver certificado ↗</a></article></div><h3 class="certificate-group-title">Formação complementar</h3><div class="grid-3"><article class="card certificate-card"><div class="cert-provider">Recode</div><h3>Gestão e Empregabilidade</h3><div class="cert-meta">40h · 02/08/2024</div><a class="cert-link" href="gestao-e-empregabilidade.pdf" target="_blank" rel="noopener">Ver certificado ↗</a></article><article class="card certificate-card"><div class="cert-provider">Sebrae</div><h3>Trilha - Conceito de Empreendedorismo e Características do Comportamento Empreendedor</h3><div class="cert-meta">26h · 01/08/2024</div><a class="cert-link" href="trilha-conceito-de-empreendedorismo-e-caracteristicas-do-comportamento-empreendedor.pdf" target="_blank" rel="noopener">Ver certificado ↗</a></article></div><h3 class="certificate-group-title">Reconhecimento</h3><div class="grid-3"><article class="card certificate-card"><div class="cert-provider">CPDI</div><h3>Semana ODS na Prática - 1º lugar</h3><div class="cert-meta">Reconhecimento · 2024</div><a class="cert-link" href="semana-ods-na-pratica-1o-lugar.pdf" target="_blank" rel="noopener">Ver certificado ↗</a></article></div></div></details></section><section id="contato"><div class="section-title"><h2>Contato</h2><p>Vamos conversar sobre oportunidades e projetos.</p></div><div class="card"><div class="actions"><a class="btn primary" href="mailto:contatovitorsantos@gmail.com">contatovitorsantos@gmail.com</a><a class="btn secondary" href="https://www.linkedin.com/in/vitorsantos3101/" target="_blank" rel="noopener">LinkedIn</a><a class="btn secondary" href="https://github.com/vitorfloripa" target="_blank" rel="noopener">GitHub</a><a class="btn secondary" href="https://wa.me/qr/AJVXUCIN6IJWK1" target="_blank" rel="noopener">WhatsApp</a></div></div></section></main><footer><div class="container">© 2026 Vitor dos Santos · Currículo online</div></footer></body></html>
